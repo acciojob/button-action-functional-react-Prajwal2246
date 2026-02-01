@@ -3,8 +3,6 @@ import "./../styles/App.css";
 
 function App() {
   const [show, setShow] = useState(false);
-  const para =
-    "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy";
 
   function handleClick() {
     setShow((prev) => !prev);
@@ -15,7 +13,12 @@ function App() {
       <button id="click" onClick={handleClick}>
         Click me
       </button>
-      {show && para}
+      {show && (
+        <p>
+          Hello, I've learnt to use the full-stack evaluation tool. This makes
+          me so happy
+        </p>
+      )}
     </div>
   );
 }
